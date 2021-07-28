@@ -41,36 +41,4 @@ parameter; (B) The projection shortcut in Eqn.(2) is used to match dimensions (d
 
 Input의 size는 A, B 방법 모두 Stride을 2로 주어서 감소시켯다고 한다.
 
-논문을 구현할때 ResNet-34는 A, ResNet-50은 B 방법을 선택하였다.  
-stride을 2로 주는 것에는 작은 의문점이 있었는데,
-
-![Untitled 2](https://user-images.githubusercontent.com/63500940/96157269-112d1e00-0f4d-11eb-875d-3ef931717490.png)
-(README%20aa143dfe50a54d6d9dee6933112a288e/Untitled%202.png)
-
-연산 과정을 생각해보면 1x1 conv에 stride: 2은 위의 그림처럼 연산이 될 것으로 생각된다. 그렇다면 중간에 계산되지 못하고 비어져 있는 부분들은 그냥 버려지게 되는 것이라는 생각이 들었다.
-
-만약 연산이 되는 부분들 보다 연산이 되지 않는 부분의 값들이 더 중요한 특징을 담고 있다면 학습에 부정적인 영향을 줄것으로 생각되었다.
-
 <a href='https://drive.google.com/drive/folders/1nRQo_fNmQMg7FkWrbZVUR87UOmk_AKJw?usp=sharing'>직접 구현한 ResNet34, ResNet50 모델의 flow chart</a>
-
-
-
-### 프로젝트 후 느낀점  
-
-논문 구현에 여러가지 어려움이 있었고
-
-문제점들을 발견하고 해결하는데 어려움을 겪다보니
-
-기한내 완성하지 못하였다.(매우 매우 아쉽)
-
-하지만 다른 코드나 방법들을 참고하지 않고 최대한 조원과 함께 고민하고
-
-지금까지 알고 있는 지식들을 동원하여 논문을 해석하고 그것을 코드로
-
-직접 구현해보았다는 것에 스스로 한 단계 발전하였다는 생각에 기쁘다.
-
-당장은 제출기한을 지켜야해서 미완성으로 제출을 할 수 밖에 없지만
-
-추후에 직접 구현한 모델로 학습도 시켜보고 성능 평가 및 개선을 할 수 있는 기회가  
-  
-있었으면 좋겠다.
